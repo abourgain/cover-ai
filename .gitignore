@@ -1,0 +1,19 @@
+venv/
+env/
+.DS_Store
+.vscode
+
+# Backend
+__pycache__
+*.pyc
+database.db
+
+# Frontend
+node_modules
+build
+dist
+config.ts
+
+# Database and env variables
+*.env
+backups/
