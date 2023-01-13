@@ -1,15 +1,3 @@
-.DEFAULT_GOAL := hard-restart
-
-ifneq (,$(wildcard ./backend/.env))
-    include ./backend/.env
-    export
-endif
-
-export COMPOSE_FILE=docker-compose.dev.yml
-
-bootstrap:
-	cp ./backend/.env.example ./backend/.env
-
 # Installer toutes les dépendances du projet
 install:
 	cd ./frontend; npm install
