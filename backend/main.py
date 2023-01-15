@@ -1,15 +1,11 @@
 """
 Starts the application
 """
-import os
-from io import BytesIO
-import base64
 import uvicorn
 from auth_token import AUTH_TOKEN
 from core.routers import router
-from fastapi import FastAPI, Response
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import torch
 from diffusers import StableDiffusionPipeline
 
 
@@ -29,7 +25,7 @@ app.add_middleware(
 DEVICE = "mps"
 MODEL_ID = "runwayml/stable-diffusion-v1-5"
 pipe = StableDiffusionPipeline.from_pretrained(
-    MODEL_ID, torch_dtype=torch.float16, revision="fp16", use_auth_token=AUTH_TOKEN)
+    MODEL_ID, revision="fp16", use_auth_token=AUTH_TOKEN)
 pipe = pipe.to(DEVICE)
 
 # Recommended if your computer has < 64 GB of RAM
