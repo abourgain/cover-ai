@@ -1,37 +1,37 @@
-# Projet Cover-AI
+# Cover-AI project
 
-Projet de site web pour la création d'image à partir de Stable Diffusion
+Web site project for image creation using Stable Diffusion
 
-## Sommaire
+## Table of Contents
 * [Installation](#installation)
-    * [Quick setup](#quick-setup)
-    * [Setup frontend](#setup-frontend)
-    * [Setup backend](#setup-backend)
-    * [Setup pylint](#setup-pylint)
-* [Commandes utiles](#commandes-utiles)
+    * [Quick Setup](#quick-setup)
+    * [Setup Frontend](#setup-frontend)
+    * [Setup Backend](#setup-backend)
+    * [Setup Pylint](#setup-pylint)
+* [Useful Commands](#useful-commands)
     * [Psql](#psql)
     * [Lint](#lint)
-* [Liens utiles](#liens-utiles)
+* [Useful Links](#useful-links)
 
 ## Installation
 
-### Quick setup
-* `make install` télécharge les dépendances du back et du front
-* `make front` lance le serveur de développement du front
-* `make back` lance le serveur de développement du back
+### Quick Setup
+* `make install` downloads the dependencies for both backend and frontend
+* `make front` starts the development server for the frontend
+* `make back` starts the development server for the backend
 
 ### Setup Frontend
-* Pour setup le frontend (i.e. télécharger tous les packets), faire `cd frontend` et lancer `npm install`.
-* Pour lancer un serveur de développement, faire `npm run dev`.
-Ce dernier utilise [Vite](https://vitejs.dev/) qui réduit considérablement les temps de chargement (< 1s)
+* To setup the frontend (i.e., download all the packages), go to `cd frontend` and run `npm install`.
+* To start a development server, run `npm run dev`.
+This uses [Vite](https://vitejs.dev/), which significantly reduces loading times (< 1s)
 
 ### Setup Backend
-* Pour setup le backend, faire un `pip install -r requirements.txt` pour installer tous les packets python nécessaires.
-* Pour lancer le serveur backend en developpement, `python3 main.py`. L'option reload permet de recharger le serveur à chaque changement!
+* To setup the backend, run `pip install -r requirements.txt` to install all the necessary Python packages.
+* To start the backend development server, run `python3 main.py`. The reload option allows the server to reload on every change!
 
 ### Setup Pylint
 
-Ajouter les lignes suivantes au fichier `.vscode/settings.json`
+Add the following lines to the `.vscode/settings.json` file:
 ```
 { ...
   "python.linting.enabled": true,
@@ -43,19 +43,20 @@ Ajouter les lignes suivantes au fichier `.vscode/settings.json`
   ... }
 ```
 
-## Commandes utiles
+## Useful Commands
 
 ### Lint
-Commandes pour lancer `eslint` et `pylint`
-* **Avec Make:**
-Faire `make lint` pour lancer les lint pour le back et le front
+Commands to run `eslint` and `pylint`
+* **With Make:**
+Run `make lint` to launch the lints for both backend and frontend
 
 * **Eslint:**
-Pour linter le frontend, lancer `npm run lint` dans le dossier `frontend`.
-La config d'eslint se trouve dans le fichier `.eslintrc.json`.
+To lint the frontend, run `npm run lint` in the `frontend` folder.
+The eslint config is in the `.eslintrc.json` file.
 
 * **Pylint:**
-Pour linter le backend, lancer `pylint --rcfile=backend/pylint.conf backend` dans le dossier `macifbot`.<br>
+To lint the backend, run `pylint --rcfile=backend/pylint.conf backend`.<br>
 
-## Liens utiles
+## Useful Links
 * [Commit convention (with emojis)](https://github.com/kazupon/git-commit-message-convention/blob/master/README.md)
+
